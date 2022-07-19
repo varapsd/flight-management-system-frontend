@@ -1,0 +1,22 @@
+.homepage{
+    display: flex;
+    padding: 10px;
+    height: 100vh;
+    background-image: url("../../../assets/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .left{
+        width: 65%;
+        padding-top: 7%;
+        h1{
+            color: #F0FFFF;
+            text-align: center;
+            font-size: 70px;
+        }
+    }
+    .right{
+        align-self: center;
+    }
+
+}
