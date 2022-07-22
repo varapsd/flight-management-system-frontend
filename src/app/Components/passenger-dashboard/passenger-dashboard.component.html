@@ -1,1 +1,17 @@
-<p>passenger-dashboard works!</p>
+<div class="passengerDashboard">
+    <div class="header">
+        
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <h4>Hi {{passengerName}}</h4>
+            <section class="nav">
+            <a class="navbar-brand" href="#">Home</a>
+            <a class="navbar-brand" href="#">Upcoming Journey</a>
+            <a class="navbar-brand" href="#">Booking History</a>
+            <a class="navbar-brand">Logout</a>
+            </section>
+          </nav>
+    </div>
+    <div>
+       <router-outlet></router-outlet> 
+    </div>
+</div>

@@ -1,6 +1,6 @@
 
 <div class="signup-form">	
-    <form action="/examples/actions/confirmation.php" method="post">
+    <form (ngSubmit)="'signup()'">
 		<h2>Create Account</h2>
 		
         <div class="form-group">
@@ -39,7 +39,7 @@
 		<div class="form-group">
             <button type="submit" class="btn btn-primary btn-block btn-lg">Sign Up</button>
         </div>
-        <div class="text-center">Already have an account? <a href="#">Login here</a>.</div>
+        <div class="text-center">Already have an account? <a [routerLink]="''">Login here</a>.</div>
 		 </form>
 	
 </div>
