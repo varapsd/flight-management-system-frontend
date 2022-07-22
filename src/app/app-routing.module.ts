@@ -5,6 +5,7 @@ import { LoginComponent } from './Components/homepage/login/login.component';
 import { SignupComponent } from './Components/homepage/signup/signup.component';
 import { BookFlightComponent } from './Components/passenger-dashboard/book-flight/book-flight.component';
 import { PassengerDashboardComponent } from './Components/passenger-dashboard/passenger-dashboard.component';
+import { SearchFlightComponent } from './Components/passenger-dashboard/search-flight/search-flight.component';
 
 const routes: Routes = [
   {path:'', component: HomepageComponent, children:[
@@ -12,7 +13,8 @@ const routes: Routes = [
     {path:'signup',component: SignupComponent}
   ]},
   {path:'passenger', component: PassengerDashboardComponent, children:[
-    {path:'/bookFlight/:flightId', component: BookFlightComponent }
+    {path:'', component: SearchFlightComponent},
+    {path:'bookFlight/:flightId', component: BookFlightComponent }
   ]}
 ];
 
