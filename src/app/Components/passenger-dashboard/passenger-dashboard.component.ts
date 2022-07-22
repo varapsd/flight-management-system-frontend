@@ -12,10 +12,12 @@ export class PassengerDashboardComponent implements OnInit {
   constructor(private loginSvc: LoginService, private router: Router) { }
 
   ngOnInit(): void {
+    /*
     if(!this.loginSvc.isLogin()){
       this.router.navigate(['']);
 
     }
+    */
   }
 
 }

@@ -1,1 +1,60 @@
-<p>book-flight works!</p>
+<div class="bookflight">
+    <form  (ngSubmit)="submit()">
+     
+      <div class="info">
+        <h2 class="d-block name">Your Final Flight Booking Details</h2>
+        
+      </div>
+      <div class="mb-3">
+        <hr class="new1">
+    </div>
+      <div class="d-flex justify-content-between">
+        <h5>Flight ID</h5>
+        <h5>{{flightID}}</h5>
+    </div>
+
+    <div class="d-flex justify-content-between">
+        <h5>Flight Name</h5>
+        <h5>{{flightName}}</h5>
+    </div>
+
+
+    <div class="d-flex justify-content-between">
+        <h5>Departure Date</h5>
+        <h5>{{departure}}</h5>
+    </div>
+
+
+    <div class="d-flex justify-content-between">
+        <h5>Arrival Date</h5>
+        <h5>{{arrival}}</h5>
+    </div>
+
+    <div class="d-flex justify-content-between">
+        <h5>Class</h5>
+        <h5>{{class}}</h5>
+    </div>
+
+    <div class="d-flex justify-content-between">
+        <h5>Number of Passenger</h5>
+        <h5>{{nPassengers}}</h5>
+    </div>
+
+    <div class="d-flex justify-content-between">
+        <h5>Payment</h5>
+        <h5>{{payment}}</h5>
+    </div>
+
+    <div class="mb-3">
+        <hr class="new1">
+    </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Book Now</button>
+      </div>
+    
+    </form>
+
+    
+  
+  </div>

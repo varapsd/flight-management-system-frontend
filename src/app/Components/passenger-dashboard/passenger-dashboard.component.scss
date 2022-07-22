@@ -1,4 +1,9 @@
 .passengerDashboard{
+ 
+    background-image: url("../../../assets/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 10px;
     .header{
         width: 100%;
@@ -12,5 +17,16 @@
             justify-content: flex-end !important;
         }
     }
+     
+    
+    .center{
+        width: 60%;
+        padding-top: 7%;
+        align-self: center;
+        background-color: transparent;
+        margin:18%;
+        
+    }
+
     
 }
