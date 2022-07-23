@@ -1,4 +1,4 @@
-.passengerDashboard{
+.adminDashboard{
     padding: 10px;
     .header{
         width: 100%;
@@ -11,16 +11,17 @@
         .nav{
             display: flex !important; 
             justify-content: flex-end !important;
-        }
-        a{
-            cursor: pointer;
-            
-        }
-        a:hover{
-            font-weight: 500;
+            a{
+                cursor: pointer !important;
+            }
+            a:hover{
+                font-weight: 500;
+            }
         }
         
         
     }
-    
+    .main{
+        margin-top: 25px;
+    }
 }

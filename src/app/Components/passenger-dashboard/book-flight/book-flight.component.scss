@@ -1,0 +1,25 @@
+.info{
+    line-height: 19px;
+}
+.bookflight{
+    width: 60%;
+    margin: auto;
+    // padding-top: 7%;
+    // padding: 7%;
+    // // align-self: center;
+    // background-color: transparent;
+    // margin:1%;
+    padding: 4%;
+    //background-color: transparentize($color: rgb(115, 216, 225), $amount:0.2);
+
+    .row{
+        margin-bottom: 15px;
+    }
+    h5{
+        margin: 0;
+    }
+    .btn{
+        background-color:  #19aa8d;
+        color: white;
+    }
+}

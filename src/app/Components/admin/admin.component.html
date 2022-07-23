@@ -1,0 +1,16 @@
+<div class="adminDashboard">
+    <div class="header">
+
+        <nav class="navbar navbar-dark" style="background-color: #19aa8d;">
+            <h4>Admin</h4>
+            <section class="nav">
+                <a class="navbar-brand" [routerLink]="'/admin'">Home</a>
+                <a class="navbar-brand" [routerLink]="'/admin/addFlight'">Add Flight</a>
+                <a class="navbar-brand">Logout</a>
+            </section>
+        </nav>
+    </div>
+    <div class="main">
+        <router-outlet></router-outlet>
+    </div>
+</div>

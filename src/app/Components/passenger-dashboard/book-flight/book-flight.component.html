@@ -1,1 +1,62 @@
-<p>book-flight works!</p>
+<div class="bookflight">
+    <form [formGroup]="bookForm"  (ngSubmit)="submit()">
+     
+      <div class="info">
+        <h2 class="d-block name">Your Final Flight Booking Details</h2>
+        
+      </div>
+      <div class="mb-3">
+        <hr class="new1">
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <small>flight Id</small>
+            <h5>{{flight.flightId}}</h5>
+        </div>
+        <div class="col">
+            <small>flight name</small>
+            <h5>{{flight.name}}</h5>
+        </div>
+        <div class="col">
+            <small>departure time</small>
+            <h5>{{flight.departureTime}}</h5>
+        </div>
+        <div class="col">
+            <small>arrival time</small>
+            <h5>{{flight.arrivalTime}}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <small>journey date</small><br />
+            <input formControlName="journeyDate" type="date" name="" id="">
+        </div>
+        <div class="col">
+            <small>Class</small><br />
+            <select formControlName="className" name="class" id="class" (change)="updatePrice()">
+                <option value="business">business</option>
+                <option value="economy">economy</option>
+            </select>
+        </div>
+        <div class="col">
+            <small>No of passengers</small>
+            <input type="number" formControlName="passNo" name="passNo" (change)="updatePrice()">
+        </div>
+        <div class="col">
+            <small>Price</small>
+            <h5>{{price | currency:'INR'}}</h5>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <hr class="new1">
+    </div>
+
+      <div class="form-group" [align]="'center'">
+        <button type="submit" class="btn btn-block btn-lg">Book Now</button>
+      </div>
+    
+    </form>
+  
+  </div>

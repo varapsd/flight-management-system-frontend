@@ -1,0 +1,28 @@
+<div class="bookingHistory container">
+    <h3 [align]="'center'">Booking History</h3>
+    <div class="row" *ngFor="let booking of bookings">
+        <div class="col">
+            <small>Booking Id</small>
+            <h5>{{booking.bookingId}}</h5>
+        </div>
+        <div class="col">
+            <small>flight Id</small>
+            <h5>{{booking.flightId}}</h5>
+        </div>
+        <div class="col">
+            <small>{{booking.source | uppercase}}</small><br />
+            <small>{{booking.destination | uppercase}}</small>
+        </div>
+        <div class="col">
+            <small>no seats</small>
+            <h5>{{booking.seatNo}}</h5>
+        </div>
+        <div class="col">
+            <small>{{ booking.arrivalTime +'-' + booking.departureTime}}</small>
+        </div>
+        <div class="col">
+            <small>Date</small>
+            <h5>{{booking.flightDate | date}}</h5>
+        </div>
+    </div>
+</div>

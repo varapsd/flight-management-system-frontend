@@ -1,0 +1,27 @@
+<div class="allFlights container">
+    <h4 [align]="'center'">All Flights</h4>
+      <div class="row" *ngFor="let flight of allFlights">
+        <div class="col">
+          <h5>{{flight.flightId}}</h5>
+          <small>{{flight.name}}</small>
+        </div>
+        <div class="col">
+          <small>{{flight.source | uppercase}}</small><br />
+          <small>{{flight.destination | uppercase}}</small>
+        </div>
+        <div class="col">
+          <small>{{flight.departureTime}} - {{flight.arrivalTime}}</small>
+        </div>
+        <div class="col">
+          <h5>{{flight.businessPrice|currency:'INR'}}</h5>
+          <small>Bussiness</small>
+        </div>
+        <div class="col">
+          <h5>{{flight.economyPrice|currency:"INR"}}</h5>
+          <small>Economy</small>
+        </div>
+        <!-- <div class="col button">
+          <button class="btn">Edit</button>
+        </div> -->
+      </div>
+</div>

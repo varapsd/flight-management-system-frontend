@@ -1,0 +1,27 @@
+.bookingHistory{
+    margin-top: 10px;
+    h5{
+        margin-bottom: 0 !important;
+    }
+    .row{
+        border-bottom: solid 1px #19aa8d;
+        align-items: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        :first-child{
+            text-align: left;       
+        }
+        // :last-child{
+        //     text-align: right;
+        // }
+        
+    }
+    .row:hover{
+            background-color: #19aa8d;
+            color: white;
+            .btn{
+                background-color: white;
+                color: #19aa8d;
+            }
+    }
+}

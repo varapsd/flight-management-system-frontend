@@ -11,6 +11,10 @@ import { HttpClientModule } from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchFlightComponent } from './Components/passenger-dashboard/search-flight/search-flight.component';
 import { BookFlightComponent } from './Components/passenger-dashboard/book-flight/book-flight.component';
+import { AdminComponent } from './Components/admin/admin.component';
+import { SharedModule } from './Components/shared/shared.module';
+import { AdminModule } from './Components/admin/admin.module';
+import { BookingHistoryComponent } from './Components/passenger-dashboard/booking-history/booking-history.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +24,15 @@ import { BookFlightComponent } from './Components/passenger-dashboard/book-fligh
     SignupComponent,
     PassengerDashboardComponent,
     SearchFlightComponent,
-    BookFlightComponent
+    BookFlightComponent,
+    BookingHistoryComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
