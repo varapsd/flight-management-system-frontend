@@ -17,17 +17,30 @@ export class LoginComponent implements OnInit {
   }
 
   loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
+    email: new FormControl('', [Validators.required]),
     password: new FormControl('', Validators.required),
   });
   
   login(){
-    this.loginSvc.PassengerLogin(this.loginForm.value.email,this.loginForm.value.password).subscribe((response:any) =>{
-      if(response){
-        this.router.navigate(['/passenger']);
-      }
-      
-    })
+    if(this.loginForm.invalid){
+      alert("invalid inputs");
+      return;
+    }
+    if(this.loginForm.value.email == 'admin'){
+      this.loginSvc.AdminLogin(this.loginForm.value.email, this.loginForm.value.password).subscribe( (response:any) =>{
+        if(response){
+          this.router.navigate(['/admin']);
+        }
+      })
+    }
+    else{
+      this.loginSvc.PassengerLogin(this.loginForm.value.email,this.loginForm.value.password).subscribe((response:any) =>{
+        if(response){
+          this.router.navigate(['/passenger']);
+        }
+        
+      })
+    }
   }
 
 } 

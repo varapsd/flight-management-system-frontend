@@ -6,7 +6,7 @@
             <section class="nav">
                 <a class="navbar-brand" [routerLink]="'/admin'">Home</a>
                 <a class="navbar-brand" [routerLink]="'/admin/addFlight'">Add Flight</a>
-                <a class="navbar-brand">Logout</a>
+                <a class="navbar-brand" (click)="logout()">Logout</a>
             </section>
         </nav>
     </div>

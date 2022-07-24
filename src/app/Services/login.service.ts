@@ -73,6 +73,34 @@ export class LoginService {
     })
     return subject.asObservable();
   }
+  AdminLogin(emailId: any, password: any): any {
+    // const auth_token = this.apiSvc.getJwtToken();
+    // const headers = new HttpHeaders({
+    //   'Content-Type': 'application/json',
+    //   'Authorization': `Bearer ${auth_token}`
+    // });
+    const body = {
+      email: emailId,
+      password: password
+    }
+    let subject = new Subject<boolean>();
+    var response = false;
+    this.apiSvc.post(this.api_url + "api/login/admin", {}, body).subscribe((res) => {
+      if (res && res.token) {
+        console.log(res);
+        localStorage.setItem("jwt-token", res.token);
+        localStorage.setItem("user-type", "admin");
+        response = true;
+      }
+      else{
+        response = false;
+      }
+      subject.next(response)
+      
+    })
+    return subject.asObservable();
+  };
+  
   logout():any{
     localStorage.removeItem("jwt-token");
   }
